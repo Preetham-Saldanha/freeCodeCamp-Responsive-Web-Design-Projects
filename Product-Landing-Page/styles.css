@@ -1,0 +1,151 @@
+html{
+    font-size:10px;
+  font-family:tahoma ,sans-serif;
+  background:rgb(0,20,0);
+  color:white;
+  
+  }
+  
+  main{
+   position : relative;
+   top:10rem; 
+  }
+  
+  section{
+    width:80%;
+    margin:auto;
+  }
+  
+  input{
+    padding:0.7rem;
+    width:80%;
+    margin: 0 auto;
+    /* margin-left:9px; */
+  display:block;
+  background:rgb(0,50,50);
+    position:relative;
+    border-radius:5px;
+    /* outline:none; */
+    border:none;
+  
+  }
+  
+  input[type="submit"]{
+    padding:0.5rem;
+    font-size:1.8rem;
+    margin:1rem auto;
+    width:200px;
+    display:block;
+    background:rgb(0,120,0);
+    color:white;
+  border-radius:4px;
+  }
+  
+  .icon{
+    height:2rem;
+    width:2rem;
+    font-size:2rem;
+    margin-right:2rem;
+  }
+  
+  #heading{
+    text-align:center;
+    letter-spacing:0.8px;
+   
+  }
+  
+  #header{
+    font-size:1.6rem;
+    display :flex;
+    border-bottom:2px solid rgb(0, 100, 0);
+    position : fixed;
+    padding:1rem 0;
+     z-index:1;
+    top:0;
+  width:100%;
+  background-color:black;
+    justify-content:space-between;
+   
+    align-items:center;
+  }
+  
+  #logo-container{
+    width:7rem;
+    height:7rem;
+  border-radius:50%;
+  border:2px solid rgb(0, 100, 0);
+  overflow:hidden;
+  object-fit:center;
+  background:black;
+  padding:0.5rem;
+  
+  }
+  
+  #header-img{
+    width:100%;
+    height:auto;
+    
+    border-radius:50%;
+  
+  }
+  
+  #video{
+    display:block;
+    width:80%;
+    margin:auto;
+  }
+  
+  #nav-bar{
+  display:flex;
+  gap:7%;
+  width:70%;
+  justify-content:center;
+  
+  }
+  
+  
+  #features{
+    margin-top:2rem;
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+  }
+  
+  
+  p{
+  display:flex;
+  align-items:center;
+  font-size:1.8rem;
+  font-weight:600;
+  
+  }
+  
+  
+  a{
+    text-decoration:none;
+    color:white;
+    
+  }
+  
+  @media only screen  and (min-width: 800px){
+  #email{
+    width:400px;
+  }
+  }
+  
+  #evolutions {
+  display:flex;
+  margin:2rem auto;
+  justify-content:space-evenly;
+  
+  }
+  
+  #evolution-heading{
+    text-align:center;
+    color:rgb(0,160,150);
+    font-size:2rem;
+  }
+  
+  #evolutions > div{
+  font-size:1.6rem
+  }

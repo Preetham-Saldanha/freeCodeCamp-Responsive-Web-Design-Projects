@@ -1,0 +1,30 @@
+code{
+    padding:10px;
+    background:rgb(220,230,230);
+    color:rgb(0,40,80);
+    display:block;
+    border-radius:3px
+  }
+  
+  *{
+    scroll-behavior:smooth;
+    background-color:rgb(0,40,80);
+    color: beige;
+    font-family:sans-serif;
+  }
+  
+  .nav-link{
+    font-family:tahoma;
+    text-decoration:none;
+    color:rgb(255,200,100);
+    display:block;
+    padding:5px;
+  }
+  
+  
+  @media screen and (min-width: 500px){
+  .container{
+    display:flex;
+  }
+  
+  }
