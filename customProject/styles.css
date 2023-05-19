@@ -1,0 +1,245 @@
+:root{
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+html{
+    color:white;
+
+}
+
+section,header,body,div{
+    margin:0;
+}
+
+nav{
+    background-color: var(--bs-gray);
+    width:100%;
+    height:10vh
+}
+
+
+.layer{
+    display: flex;
+    height: 90vh;
+    transition: all;
+    transition-duration: 1s;
+}
+
+.top-layer{
+    /* display: none; */
+
+}
+
+.bottom-layer{
+position: absolute;
+width:100%;
+top:10vh;
+z-index: -1;
+/* left:calc(8% + 0.5vh); */
+/* height:100% */
+}
+
+.sidebar{
+    width:8%;
+    background-color: var(--bs-gray);
+    height: 100%;
+  
+    /* width:10vh; */
+}
+
+
+
+.main-grid-box{
+    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    width:100%;
+    gap:0.5vh;
+    padding:0.5vh 0 0 0.5vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 44.5vh 44.5vh;
+    grid-template-areas:
+     "a a c c c"
+     "b b c c c";
+
+    /* padding-top:0.5vh; */
+    
+}
+
+
+/* .main-content >div{
+    margin:1vh 1vh 0 1vh
+} */
+ 
+
+/* styling for the first card element */
+
+#first-card{
+grid-area:a;
+background-color: var(--bs-dark);
+/* transition: opacity 2s; */
+display: inline-block;
+}
+
+.fading-away{
+opacity: 1;
+transition: opacity 2s;
+
+}
+
+.fading-away[change-first-card]{
+    opacity: 0;
+    display: none;
+}
+
+.tiny-fade{
+    opacity:0;
+}
+
+.do-not-display{
+    display:none !important;
+}
+
+
+
+/* styling for the second card element */
+
+#second-card{
+grid-area:b;
+background-color: var(--bs-red);
+
+}
+
+
+/* styling for the third card element */
+
+#main-card{
+grid-area:c;
+background-color: var(--bs-gray);
+
+}
+
+
+
+
+#first-shell{
+    grid-area:a;
+    background-color: var(--bs-cyan);
+    transition: opacity 2s;
+    display: grid;
+    }
+    
+    
+    
+    /* styling for the second card element */
+    
+    #second-shell{
+    grid-area:b;
+    background-color: var(--bs-green);
+    bottom: 0;
+    left: 8%;
+    
+    }
+    
+    
+    /* styling for the third card element */
+    
+    #third-shell{
+    grid-area:c;
+
+    background-color: var(--bs-danger);
+    
+    }
+    
+    
+    
+
+    /* css for shell's internal elements */
+
+    .smaller-shell-grid-box{
+        display: grid;
+        width:100%;
+        height: 100%;
+grid-template-columns: repeat(14, 1fr);
+grid-template-rows: repeat(5,1fr);
+/* grid-template-areas: "b b b b b"
+                     "a c c c c"
+                     "a c c c c"
+                     "a c c c c"
+                     "a c c c c" */
+;
+    }
+
+    .shell-sidebar{
+        grid-area: 1/ 1/ 6 /1;
+        background-color: #0dcaf0;
+    }
+
+    /* .shell-top-margin{
+grid-area: 1 / 1 / 1/ 9;
+background-color: #20c997;
+    } */
+
+    .shell-content{
+grid-area: 1/2/6/15;
+background-color: #d63384;
+    }
+
+
+    #first-shell > div.shell-sidebar{
+        background-color: var(--bs-green);
+
+    }
+ #first-shell > div.shell-content{
+        background-color: var(--bs-indigo);
+        
+    }
+
+    .zoom-to-full{
+        
+        position: absolute;
+        animation-name: enlarger ;
+        animation-timing-function: ease-out;
+        animation-duration: 1s;
+        animation-iteration-count:1 ;
+        animation-fill-mode: forwards;
+        
+    }
+
+    @keyframes enlarger {
+        0%{
+           
+            width: 15%;
+            height: 15%;
+
+        }
+
+
+        100%{
+            width:92%;
+            height: 89.5vh;
+            
+        }
+    }
