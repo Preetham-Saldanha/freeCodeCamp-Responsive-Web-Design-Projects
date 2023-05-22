@@ -45,6 +45,7 @@ nav{
     height: 90vh;
     transition: all;
     transition-duration: 1s;
+    opacity: 1;
 }
 
 .top-layer{
@@ -100,10 +101,10 @@ z-index: -1;
 grid-area:a;
 background-color: var(--bs-dark);
 /* transition: opacity 2s; */
-display: inline-block;
+/* display: inline-block; */
 }
 
-.fading-away{
+/* .fading-away{
 opacity: 1;
 transition: opacity 2s;
 
@@ -112,7 +113,7 @@ transition: opacity 2s;
 .fading-away[change-first-card]{
     opacity: 0;
     display: none;
-}
+} */
 
 .tiny-fade{
     opacity:0;
@@ -159,7 +160,7 @@ background-color: var(--bs-gray);
     grid-area:b;
     background-color: var(--bs-green);
     bottom: 0;
-    left: 8%;
+    /* left: 8%; */
     
     }
     
@@ -188,8 +189,7 @@ grid-template-rows: repeat(5,1fr);
                      "a c c c c"
                      "a c c c c"
                      "a c c c c"
-                     "a c c c c" */
-;
+                     "a c c c c" */;
     }
 
     .shell-sidebar{
@@ -222,7 +222,8 @@ background-color: #d63384;
         position: absolute;
         animation-name: enlarger ;
         animation-timing-function: ease-out;
-        animation-duration: 1s;
+        /* animation-delay:300ms ; */
+        animation-duration: 1000ms;
         animation-iteration-count:1 ;
         animation-fill-mode: forwards;
         
@@ -241,5 +242,30 @@ background-color: #d63384;
             width:92%;
             height: 89.5vh;
             
+        }
+    }
+
+    .cancel-zoom-to-full{
+        /* position: relative; */
+        position: absolute;
+        animation-name: dwindler ;
+        animation-timing-function: ease-out;
+        /* animation-delay:300ms ; */
+        animation-duration: 1000ms;
+        animation-iteration-count:1 ;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes dwindler {
+        0%{
+            width:92%;
+            height: 89.5vh;
+
+        }
+
+
+        100%{
+            width: 38%;
+            height: 50%;
         }
     }

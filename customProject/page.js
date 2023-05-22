@@ -6,40 +6,79 @@ const first_shell = document.getElementById("first-shell")
 const second_shell= document.getElementById("second-shell")
 const third_shell = document.getElementById("third-shell")
 
+// =======================first card event listener==========================
+
+
 first_card.addEventListener("click",()=>{
 
-first_card.setAttribute("change-first-card",true);
+
+    first_shell.childNodes[0].addEventListener("click",()=>{
+        // first_card.removeAttribute("change-first-card")
+setTimeout(()=>{
+    first_shell.classList.remove("zoom-to-full", "cancel-zoom-to-full")
+
+    second_shell.classList.remove("do-not-display")
+    third_shell.classList.remove("do-not-display")
+    top_layer.classList.remove("tiny-fade", "do-not-display")
 
 
-first_shell.classList.add("zoom-to-full")
+    first_shell.childNodes[0].removeEventListener("click")
+    
+},1000)
+       
+first_shell.classList.add("cancel-zoom-to-full")
+
+    })
+
+
+        // first_card.setAttribute("change-first-card",true);
+
+
+        first_shell.classList.add("zoom-to-full")
 
 
 
-second_shell.classList.add("do-not-display")
-third_shell.classList.add("do-not-display")
-top_layer.classList.add("tiny-fade")
-    setTimeout(()=>{
+        second_shell.classList.add("do-not-display")
+        third_shell.classList.add("do-not-display")
+        top_layer.classList.add("tiny-fade")
+        setTimeout(()=>{
         top_layer.classList.add("do-not-display")
-    }, 1000)
+        }, 1000)
 }
 )
 
 
 
+//===============================second card event listener=================================
+
 
 second_card.addEventListener("click",(e)=>{
 
-console.log(second_shell.childNodes)
+
 
 second_shell.childNodes[0].addEventListener("click",()=>{
-    console.log("lets see")
-    second_shell.classList.remove("zoom-to-full")
-    top_layer.classList.remove("do-not-display","tiny-fade");
 
+    // second_card.removeAttribute("change-first-card")
+
+    setTimeout(()=>{
+        second_shell.classList.remove("zoom-to-full","cancel-zoom-to-full")
+
+        
+        first_shell.classList.remove("do-not-display")
+        third_shell.classList.remove("do-not-display")
+        top_layer.classList.remove("do-not-display","tiny-fade");
+        
+    
+        second_shell.childNodes[0].removeEventListener("click")
+    },1000)
+
+
+    second_shell.classList.add("cancel-zoom-to-full")
+    
 })
 
-console.log("fired second listener")
-    second_shell.setAttribute("change-first-card",true);
+
+    // second_card.setAttribute("change-first-card",true);
 
 
     second_shell.classList.add("zoom-to-full")
@@ -52,9 +91,7 @@ console.log("fired second listener")
         setTimeout(()=>{
             top_layer.classList.add("do-not-display")
         }, 1000)
-    }
-
-)
+    })
 
 
 
