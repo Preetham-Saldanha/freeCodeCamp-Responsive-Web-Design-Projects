@@ -14,19 +14,28 @@ first_card.addEventListener("click",()=>{
 
     first_shell.childNodes[0].addEventListener("click",()=>{
         // first_card.removeAttribute("change-first-card")
-setTimeout(()=>{
-    first_shell.classList.remove("zoom-to-full", "cancel-zoom-to-full")
 
-    second_shell.classList.remove("do-not-display")
-    third_shell.classList.remove("do-not-display")
-    top_layer.classList.remove("tiny-fade", "do-not-display")
+        setTimeout(()=>{
+            top_layer.classList.remove("tiny-fade")
+        },800)  
+
+       setTimeout(()=>{
+       first_shell.classList.remove("zoom-to-full", "shrink-back")
+
+       second_shell.classList.remove("do-not-display")
+       third_shell.classList.remove("do-not-display")
 
 
-    first_shell.childNodes[0].removeEventListener("click")
+
+       first_shell.childNodes[0].removeEventListener("click")
     
-},1000)
-       
-first_shell.classList.add("cancel-zoom-to-full")
+       },1400)
+
+   
+
+first_shell.classList.add("shrink-back")
+top_layer.classList.remove( "do-not-display")
+
 
     })
 
@@ -59,21 +68,26 @@ second_card.addEventListener("click",(e)=>{
 second_shell.childNodes[0].addEventListener("click",()=>{
 
     // second_card.removeAttribute("change-first-card")
+    
+    setTimeout(()=>{
+        top_layer.classList.remove("tiny-fade")
+    },800)  
 
     setTimeout(()=>{
-        second_shell.classList.remove("zoom-to-full","cancel-zoom-to-full")
+        second_shell.classList.remove("zoom-to-full","shrink-back")
 
         
         first_shell.classList.remove("do-not-display")
         third_shell.classList.remove("do-not-display")
-        top_layer.classList.remove("do-not-display","tiny-fade");
+        
         
     
         second_shell.childNodes[0].removeEventListener("click")
-    },1000)
+    },1400)
 
 
-    second_shell.classList.add("cancel-zoom-to-full")
+    second_shell.classList.add("shrink-back")
+    top_layer.classList.remove("do-not-display");
     
 })
 
