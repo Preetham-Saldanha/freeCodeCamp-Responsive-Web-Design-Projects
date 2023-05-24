@@ -1,132 +1,135 @@
-:root{
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0)
+  );
 }
-html{
-    color:white;
-    font-family: 'Poppins', sans-serif;
-    font-size: 10px;
-    }
-
-
-section,header,body,div,h1{
-    margin:0;
-}
-
-
-nav{
-    background-color: var(--bs-gray);
-    width:100%;
-    height:10vh;
-    /* overflow: hidden; */
-    /* object-fit: contain; */
-    /* z-index:2 */
+html {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
 }
 
-nav > div{
-    width:80%;
-    height:100%;
-    margin: auto;
-   display: flex;
-   align-items: center;
-
+section,
+header,
+body,
+div,
+h1 {
+  margin: 0;
 }
 
- #profile-img {
-    object-fit: contain;
-    width: auto;
-    height: 95%;
-    /* margin-top: 10%; */
+nav {
+  background-color: var(--bs-gray);
+  width: 100%;
+  height: 10vh;
+  /* overflow: hidden; */
+  /* object-fit: contain; */
+  /* z-index:2 */
 }
 
-
-.layer{
-    display: flex;
-    height: 90vh;
-    transition: all;
-    transition-duration: 400ms;
-    opacity: 1;
+nav > div {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.top-layer{
-    /* display: none; */
-    position: relative;
-z-index: 2;
-/* display: none; */
+#profile-img {
+  object-fit: contain;
+  width: auto;
+  height: 95%;
+  /* margin-top: 10%; */
 }
 
-.bottom-layer{
-position: absolute;
-width:100%;
-top:10vh;
-z-index: 1;
-/* left:calc(8% + 0.5vh); */
-/* height:100% */
+.layer {
+  display: flex;
+  height: 90vh;
+  transition: all;
+  transition-duration: 400ms;
+  opacity: 1;
 }
 
-.sidebar{
-    width:8%;
-    background-color: var(--bs-gray);
-    height: 100%;
-  
-    /* width:10vh; */
+.top-layer {
+  /* display: none; */
+  position: relative;
+  z-index: 2;
+  /* opacity: 0; */
+  /* display: none; */
 }
 
-
-
-.main-grid-box{
-    display: grid;
-    box-sizing: border-box;
-    height: 100%;
-    width:100%;
-    gap:0.5vh;
-    padding:0.5vh 0 0 0.5vh;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 44.5vh 44.5vh;
-    grid-template-areas:
-     "a a c c c"
-     "b b c c c";
-
-    /* padding-top:0.5vh; */
-    
+.bottom-layer {
+  position: absolute;
+  width: 100%;
+  top: 10vh;
+  z-index: 1;
+  /* left:calc(8% + 0.5vh); */
+  /* height:100% */
 }
 
+.sidebar {
+  width: 8%;
+  background-color: var(--bs-gray);
+  height: 100%;
+
+  /* width:10vh; */
+}
+
+.main-grid-box {
+  display: grid;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  gap: 0.5vh;
+  padding: 0.5vh 0 0 0.5vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 44.5vh 44.5vh;
+  grid-template-areas:
+    "a a c c c"
+    "b b c c c";
+
+  /* padding-top:0.5vh; */
+}
 
 /* .main-content >div{
     margin:1vh 1vh 0 1vh
 } */
- 
 
 /* styling for the first card element */
 
-#first-card{
-grid-area:a;
-background-color: rgb(37,62, 70);
+#first-card {
+  grid-area: a;
+  background-color: rgb(37, 62, 70);
 
-/* transition: opacity 2s; */
-/* display: inline-block; */
+  /* transition: opacity 2s; */
+  /* display: inline-block; */
 }
 
 /* .fading-away{
@@ -140,190 +143,161 @@ transition: opacity 2s;
     display: none;
 } */
 
-.tiny-fade{
-    opacity:0;
+.tiny-fade {
+  opacity: 0;
 }
 
-.do-not-display{
-    display:none !important;
+.do-not-display {
+  display: none !important;
 }
-
-
 
 /* styling for the second card element */
 
-#second-card{
-grid-area:b;
-background-color: var(--bs-red);
-
+#second-card {
+  grid-area: b;
+  background-color: var(--bs-red);
 }
-
 
 /* styling for the third card element */
 
-#main-card{
-grid-area:c;
-background-color: #787d81;
-
+#main-card {
+  grid-area: c;
+  background-color: #787d81;
 }
 
-
-.animating-content > div{
-    display: flex;
-    flex-direction: column;
-gap: 32%;
-padding: 1rem ;
-
+.animating-content > div {
+  display: flex;
+  flex-direction: column;
+  gap: 32%;
+  padding: 1rem;
 }
 
-.card-title > h1{
-    font-size: 2rem;
-    font-weight: 300;
+.card-title > h1 {
+  font-size: 2rem;
+  font-weight: 300;
 }
 
-.card-body{
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 1rem;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
-.card-icon{
-    font-size: 5rem;
+.card-icon {
+  font-size: 5rem;
 }
 
-.card-body>i:nth-of-type(2){
-    font-size: 1.5rem;
-    font-weight: 300;
+.card-body > i:nth-of-type(2) {
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
-#first-shell{
-    grid-area:a;
-    background-color: var(--bs-gray);
-    transition: opacity 2s;
-    display: grid;
-    }
-    
-    
-    
-    /* styling for the second card element */
-    
-    #second-shell{
-    grid-area:b;
-    background-color: var(--bs-gray);
-    bottom: 0;
-    /* left: 8%; */
-    
-    }
-    
-    
-    /* styling for the third card element */
-    
-    #third-shell{
-    grid-area:c;
+#first-shell {
+  grid-area: a;
+  background-color: var(--bs-gray);
+  transition: opacity 2s;
+  display: grid;
+}
 
-    background-color: var(--bs-gray);
-    
-    }
-    
-    
-    
+/* styling for the second card element */
 
-    /* css for shell's internal elements */
+#second-shell {
+  grid-area: b;
+  background-color: var(--bs-gray);
+  bottom: 0;
+  /* left: 8%; */
+}
 
-    .smaller-shell-grid-box{
-        display: grid;
-        width:100%;
-        height: 100%;
-        grid-template-columns: repeat(14, 1fr);
-        grid-template-rows: repeat(5,1fr);
-/* grid-template-areas: "b b b b b"
+/* styling for the third card element */
+
+#third-shell {
+  grid-area: c;
+
+  background-color: var(--bs-gray);
+}
+
+/* css for shell's internal elements */
+
+.smaller-shell-grid-box {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(14, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  /* grid-template-areas: "b b b b b"
                      "a c c c c"
                      "a c c c c"
                      "a c c c c"
-                     "a c c c c" */;
-    }
+                     "a c c c c" */
+}
 
-    .shell-sidebar{
-        grid-area: 1/ 1/ 6 /1;
-        background-color: var(--bs-gray);
-    }
+.shell-sidebar {
+  grid-area: 1/ 1/ 6 /1;
+  background-color: var(--bs-gray);
+}
 
-    /* .shell-top-margin{
+/* .shell-top-margin{
 grid-area: 1 / 1 / 1/ 9;
 background-color: #20c997;
     } */
 
-    .shell-content{
-grid-area: 1/2/6/15;
-background-color: #d63384;
-    }
+.shell-content {
+  grid-area: 1/2/6/15;
+  background-color: #d63384;
+}
 
+#first-shell > div.shell-sidebar {
+  background-color: var(--bs-green);
+}
+#first-shell > div.shell-content {
+  background-color: var(--bs-indigo);
+}
 
-    #first-shell > div.shell-sidebar{
-        background-color: var(--bs-green);
+.zoom-to-full {
+  position: absolute;
+  animation-name: enlarger;
+  animation-timing-function: ease-out;
+  /* animation-delay:300ms ; */
+  animation-duration: 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
-    }
- #first-shell > div.shell-content{
-        background-color: var(--bs-indigo);
-        
-    }
+@keyframes enlarger {
+  0% {
+    width: 15%;
+    height: 15%;
+  }
 
-    .zoom-to-full{
-        
-        position: absolute;
-        animation-name: enlarger ;
-        animation-timing-function: ease-out;
-        /* animation-delay:300ms ; */
-        animation-duration: 1000ms;
-        animation-iteration-count:1 ;
-        animation-fill-mode: forwards;
-        
-    }
+  100% {
+    width: 92%;
+    height: 89.5vh;
+  }
+}
 
-    @keyframes enlarger {
-        0%{
-           
-            width: 15%;
-            height: 15%;
+.shrink-back {
+  /* position: relative; */
+  position: absolute;
+  animation-name: dwindler;
+  animation-timing-function: ease-out;
+  /* animation-delay:300ms ; */
+  animation-duration: 800ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 
-        }
+@keyframes dwindler {
+  0% {
+    width: 92%;
+    height: 89.5vh;
+  }
 
+  100% {
+    width: 36.75%;
+    height: 49.45%;
 
-        100%{
-            width:92%;
-            height: 89.5vh;
-            
-        }
-    }
-
-    .shrink-back{
-        /* position: relative; */
-        position: absolute;
-        animation-name: dwindler ;
-        animation-timing-function: ease-out;
-        /* animation-delay:300ms ; */
-        animation-duration: 800ms;
-        animation-iteration-count:1 ;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes dwindler {
-        0%{
-            width:92%;
-            height: 89.5vh;
-
-        }
-
-
-        100%{
-            width: 36.75%;
-            height: 49.45%;
-
-            /* width: 36.2%;
+    /* width: 36.2%;
             height: 49.45%; */
-        }
-    }
-
-
-    
+  }
+}
