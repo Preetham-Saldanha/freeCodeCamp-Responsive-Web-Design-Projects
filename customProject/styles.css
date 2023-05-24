@@ -1,7 +1,7 @@
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
-  --bs-purple: #6f42c1;
+  --bs-purple: #533191;
   --bs-pink: #d63384;
   --bs-red: #dc3545;
   --bs-orange: #fd7e14;
@@ -206,6 +206,7 @@ transition: opacity 2s;
   grid-area: b;
   background-color: var(--bs-gray);
   bottom: 0;
+  /* overflow: hidden; */
   /* left: 8%; */
 }
 
@@ -213,8 +214,7 @@ transition: opacity 2s;
 
 #third-shell {
   grid-area: c;
-
-  background-color: var(--bs-gray);
+  background-color: var(--bs-purple);
 }
 
 /* css for shell's internal elements */
@@ -300,4 +300,96 @@ background-color: #20c997;
     /* width: 36.2%;
             height: 49.45%; */
   }
+}
+
+.slide-third-shell {
+  position: absolute;
+  animation-name: slider;
+  animation-timing-function: ease-out;
+  animation-duration: 1200ms;
+  /* animation-iteration-count: 1; */
+  right: 0;
+  /* bottom: 0; */
+  height: 89.5vh;
+
+  animation-fill-mode: both;
+}
+
+.unslide-third-shell {
+  position: absolute;
+  animation-name: unslider;
+  animation-duration: 1000ms;
+  animation-direction: reverse;
+
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slider {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 92%;
+  }
+}
+
+@keyframes unslider {
+  0% {
+    width: 50%;
+  }
+
+  100% {
+    width: 92%;
+  }
+}
+
+/* ===========================================================3rd shell content css ===================== */
+
+.project-tile {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* margin: auto; */
+  /* opacity: 0; */
+  justify-content: center;
+  align-items: center;
+  grid-area: 1/2/6/15;
+  /* box-sizing: border-box; */
+  /* width: inherit; */
+  /* color: black; */
+  transition: all;
+  transition-duration: 500ms;
+}
+
+.project {
+  text-align: center;
+  width: 200px;
+  height: 150px;
+
+  /* display: inline-block; */
+
+  /* overflow: hidden; */
+}
+
+.project > img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.project > figcaption {
+  /* display: inline-block; */
+  /* position: relative; */
+  padding: 1rem;
+  font-size: 1.3rem;
+  background-color: var(--bs-gray);
+}
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
 }
