@@ -6,7 +6,8 @@ const top_layer = document.querySelector(".top-layer");
 const first_shell = document.getElementById("first-shell");
 const second_shell = document.getElementById("second-shell");
 const third_shell = document.getElementById("third-shell");
-const project_tile = document.getElementsByClassName("project-tile")[0];
+const projects_container =
+  document.getElementsByClassName("projects-container")[0];
 // =======================first card event listener==========================
 
 function first_card_handler() {
@@ -97,7 +98,7 @@ function third_card_handler() {
   third_shell.firstElementChild.addEventListener("click", () => {
     // second_card.removeAttribute("change-first-card")
     console.log("sidebar of 3rd shell");
-    project_tile.classList.add("tiny-fade");
+    projects_container.classList.add("tiny-fade");
     // second_shell.firstElementChild.removeEventListener("click")
     setTimeout(() => {
       top_layer.classList.remove("tiny-fade");
@@ -131,7 +132,7 @@ function third_card_handler() {
     top_layer.classList.add("do-not-display");
     // slowly setting opacity of content
 
-    project_tile.classList.remove("tiny-fade");
+    projects_container.classList.remove("tiny-fade");
   }, 1000);
 }
 
