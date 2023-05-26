@@ -41,8 +41,13 @@ section,
 header,
 body,
 div,
-h1 {
+h1,
+p {
   margin: 0;
+}
+
+main {
+  overflow: hidden;
 }
 
 nav {
@@ -62,12 +67,68 @@ nav > div {
   align-items: center;
 }
 
+/* styling profile */
+
+.profile-img-container {
+  width: 11%;
+  height: 11%;
+}
+
 #profile-img {
   object-fit: contain;
-  width: auto;
-  height: 95%;
+  width: 100%;
+  height: auto;
+  border-radius: 100px;
+  /* display: inline-block; */
   /* margin-top: 10%; */
 }
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  /* width: 100%; */
+}
+
+.profile-title {
+  position: relative;
+  top: -1rem;
+  font-size: 3rem;
+  font-family: "Poppins";
+  /* width: 100%; */
+}
+
+.profile-subtitle {
+  position: relative;
+  top: -1.4rem;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.skills-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* overflow: none; */
+}
+
+.skills-container > div {
+  width: 250px;
+  height: auto;
+  text-align: center;
+  max-width: 250px;
+  /* overflow: hidden; */
+  /* max-height: 100%; */
+}
+
+/* ================================================================================================ */
 
 .layer {
   display: flex;
@@ -248,10 +309,11 @@ background-color: #20c997;
 }
 
 #first-shell > div.shell-sidebar {
-  background-color: var(--bs-green);
+  background-color: rgb(37, 62, 70);
 }
 #first-shell > div.shell-content {
-  background-color: var(--bs-indigo);
+  background-color: var(--bs-dark);
+  padding: 2% 3%;
 }
 
 .zoom-to-full {
