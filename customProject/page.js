@@ -59,6 +59,8 @@ function second_card_handler() {
   console.log("parent 2nd card");
   second_shell.firstElementChild.addEventListener("click", () => {
     // second_card.removeAttribute("change-first-card")
+    document.getElementById("contact").classList.add("tiny-fade");
+
     console.log("sidebar of 2nd shell");
     // second_shell.firstElementChild.removeEventListener("click")
     setTimeout(() => {
@@ -91,6 +93,7 @@ function second_card_handler() {
   top_layer.classList.add("tiny-fade");
   setTimeout(() => {
     top_layer.classList.add("do-not-display");
+    document.getElementById("contact").classList.remove("tiny-fade");
   }, 1000);
 }
 
