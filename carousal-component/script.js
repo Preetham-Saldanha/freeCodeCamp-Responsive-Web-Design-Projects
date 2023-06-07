@@ -1,8 +1,8 @@
+import { debounce, throttle } from "./throttlendebounce.js";
+
 const slider = document.getElementsByClassName("slider")[0];
 const left_arrow = document.getElementsByClassName("left-arrow-container")[0];
 const right_arrow = document.getElementsByClassName("right-arrow-container")[0];
-
-console.log(left_arrow, right_arrow, slider, document);
 
 const slider_styles = window.getComputedStyle(slider);
 
@@ -11,19 +11,17 @@ const element_count =
 
 console.log(element_count);
 
-// arrow handlers
-
-right_arrow.addEventListener("click", () => {
+console.log("helloo");
+const handleRightArrow = throttle(function () {
   const currPosition = parseInt(
     slider_styles.getPropertyValue("--slider-position")
   );
   if (currPosition < element_count / 4 - 1) {
     slider.style.setProperty("--slider-position", +currPosition + 1);
   }
-});
+}, 1000);
 
-left_arrow.addEventListener("click", () => {
-  // const slider_styles = window.getComputedStyle(slider);
+const handleLeftArrow = throttle(function () {
   const currPosition = parseInt(
     slider_styles.getPropertyValue("--slider-position")
   );
@@ -32,6 +30,8 @@ left_arrow.addEventListener("click", () => {
   if (currPosition !== 0) {
     slider.style.setProperty("--slider-position", +currPosition - 1);
   }
-});
+}, 1000);
 
-console.log("sadjde");
+right_arrow.addEventListener("click", handleRightArrow);
+
+left_arrow.addEventListener("click", handleLeftArrow);
