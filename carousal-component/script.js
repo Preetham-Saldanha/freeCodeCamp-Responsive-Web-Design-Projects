@@ -15,19 +15,29 @@ const handleRightArrow = throttle(function () {
     slider_styles.getPropertyValue("--slider-position")
   );
   setActiveBar("right", currPosition);
-  if (currPosition < element_count / 4 - 1) {
-    slider.style.setProperty("--slider-position", +currPosition + 1);
-  }
+  // if (currPosition < element_count / 4 - 1) {
+  //   slider.style.setProperty("--slider-position", currPosition + 1);
+  // }
+
+  slider.style.setProperty(
+    "--slider-position",
+    (currPosition + 1) % (element_count / 4)
+  );
 }, 1000);
 
 const handleLeftArrow = throttle(function () {
   const currPosition = parseInt(
     slider_styles.getPropertyValue("--slider-position")
   );
-  setActiveBar("left", currPosition);
+
   console.log(!currPosition !== 0, currPosition);
+  // if (currPosition !== 0) {
+  //   slider.style.setProperty("--slider-position", currPosition - 1);
+  // }
+  console.log(currPosition, currPosition !== 0);
   if (currPosition !== 0) {
-    slider.style.setProperty("--slider-position", +currPosition - 1);
+    setActiveBar("left", currPosition);
+    slider.style.setProperty("--slider-position", currPosition - 1);
   }
 }, 1000);
 
@@ -63,12 +73,13 @@ function setActiveBar(move, currPosition) {
   const parent = document.getElementById("progress-bar");
   const previous = document.getElementsByClassName("active-bar")[0];
 
-  if (
-    (currPosition === 0 && move === "left") ||
-    (currPosition === element_count / 4 - 1 && move === "right")
-  ) {
-    return;
-  }
+  // if (
+  //   (currPosition === 0 && move === "left") ||
+  //   (currPosition === element_count / 4 - 1 && move === "right")
+  // ) {
+  //   return;
+  // }
+
   previous.classList.remove("active-bar");
 
   if (move === "right") {

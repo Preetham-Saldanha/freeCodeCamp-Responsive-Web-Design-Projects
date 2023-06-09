@@ -33,7 +33,7 @@ hr {
   /* overflow: hidden; */
   transition: all 1s;
   --slider-position: 0;
-  --total-items: 0;
+
   gap: 3px;
   transform: translateX(calc(var(--slider-position) * -100vw));
   /* padding: 0px 6.5vh; */
@@ -42,7 +42,9 @@ hr {
 
 .element {
   /* flex: 0 0 25%; */
+  --total-items: 4;
   flex-shrink: 0;
+  /* width: calc(100 / var(--total-items)); */
   width: 25%;
   max-width: 25%;
 }
@@ -115,4 +117,20 @@ hr {
 
 .active-bar {
   background-color: rgba(250, 250, 250, 0.8);
+}
+
+@media screen and (max-width: 400px) {
+  .element > img {
+    --total-items: 1;
+  }
+}
+@media screen and (min-width: 400.1px) and (max-width: 900px) {
+  .element > img {
+    --total-items: 2;
+  }
+}
+@media screen and (min-width: 900.1px) and (max-width: 1200px) {
+  .element > img {
+    --total-items: 3;
+  }
 }
