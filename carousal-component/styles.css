@@ -8,7 +8,7 @@ body {
 }
 
 .heading {
-  color: rgba(138, 43, 226, 0.5);
+  color: rgba(138, 43, 226, 0.9);
   font-family: sans-serif;
   font-style: italic;
   text-align: center;
@@ -16,6 +16,7 @@ body {
 }
 hr {
   width: 90%;
+  border-color: rgba(138, 43, 226, 0.9);
 }
 
 .container {
@@ -32,6 +33,7 @@ hr {
   /* overflow: hidden; */
   transition: all 1s;
   --slider-position: 0;
+  --total-items: 0;
   gap: 3px;
   transform: translateX(calc(var(--slider-position) * -100vw));
   /* padding: 0px 6.5vh; */
@@ -87,4 +89,30 @@ hr {
   /* background-color: aqua; */
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+}
+
+/* =================progress bar styles================ */
+
+#progress-bar {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  width: 40%;
+  margin: auto;
+  padding: 8vh;
+  margin-top: 5vh;
+  gap: 10px;
+  /* height: 5px; */
+}
+
+.single-bar {
+  border-radius: 2px;
+  height: 5px;
+  background-color: rgb(66, 56, 89);
+  flex-grow: 0;
+  width: 25%;
+}
+
+.active-bar {
+  background-color: rgba(250, 250, 250, 0.8);
 }
