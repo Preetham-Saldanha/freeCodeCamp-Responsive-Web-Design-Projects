@@ -10,10 +10,13 @@ body {
 .heading {
   background: linear-gradient(
     45deg,
-    rgb(72, 0, 255) 0 50%,
-    rgb(0, 229, 255) 50% 100%
+    black,
+    rgb(72, 0, 255),
+    black,
+    /* rgb(0, 229, 255), */ rgb(127, 0, 0),
+    black
   );
-  color: black;
+  color: rgb(155, 155, 242);
   font-family: sans-serif;
   font-style: italic;
   text-align: center;
