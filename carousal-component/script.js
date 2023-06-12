@@ -92,3 +92,30 @@ function setActiveBar(move, currPosition) {
     parent.children[latest].classList.add("active-bar");
   }
 }
+
+// =========================clock=======================
+
+const hour_hand = document.getElementById("hour");
+const minute_hand = document.getElementById("minute");
+const second_hand = document.getElementById("second");
+
+const date = new Date();
+let hourValue = date.getHours();
+let minuteValue = date.getMinutes();
+hourValue = hourValue + minuteValue / 60;
+let initialSecond = date.getSeconds();
+let secondValue = initialSecond;
+
+function updateAngle() {
+  secondValue = secondValue + 1;
+  if (secondValue % 60 === 1) {
+    minuteValue = minuteValue + 1;
+    hourValue = hourValue + 1 / 60;
+  }
+
+  hour_hand.style.setProperty("--hour-angle", `${hourValue}deg`);
+  minute_hand.style.setProperty("--minute-angle", `${minuteValue}deg`);
+  second_hand.style.setProperty("--second-angle", `${secondValue}deg`);
+}
+
+setInterval(updateAngle, 1000);
